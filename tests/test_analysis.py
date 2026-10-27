@@ -103,9 +103,6 @@ def test_truncated_section_data_warns(pe_bytes: bytes):
     assert r.sections[-1].warnings
 
 
-# --- malformed input must fail safely ---------------------------------
-
-
 def test_empty_file(tmp_path: Path):
     p = tmp_path / "empty.exe"
     p.write_bytes(b"")
